@@ -1,0 +1,29 @@
+{
+  "name": "jest-bug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ATheCoder/jest-bug.git",
+  "author": "Arash Arbabi <arbabiarash0@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testMatch": [
+      "**/__tests__/**/*.[jtl]s?(x)",
+      "**/?(*.)+(spec|test).[tjl]s?(x)"
+    ],
+    "moduleFileExtensions": ["ls","js", "json", "jsx", "ts", "tsx", "node"],
+    "transformIgnorePatterns" : ["<rootDir>/node_modules/"],
+    "moduleNameMapper" : {
+      "core": "<rootDir>/dank/core"
+    },
+    "transform": {
+      "^.+\\.ls$": "<rootDir>/jest.ls.transformer"
+    }
+  },
+  "dependencies": {
+    "jest": "^24.9.0",
+    "livescript": "^1.6.0"
+  }
+}
